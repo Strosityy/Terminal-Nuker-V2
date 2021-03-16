@@ -72,7 +72,7 @@ async def massdm(ctx):
 @bot.event
 async def on_guild_channel_create(channel):
      while True:
-        await channel.send(message)
+        await channel.send(spam_message)
 #help commamd
 @bot.command()
 async def help(ctx):
