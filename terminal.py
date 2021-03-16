@@ -69,6 +69,10 @@ async def massdm(ctx):
             await member.send(massdm)
         except:
             pass
+@bot.event
+async def on_guild_channel_create(channel):
+     while True:
+        await channel.send(message)
 #help commamd
 @bot.command()
 async def help(ctx):
