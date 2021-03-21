@@ -21,7 +21,7 @@ key = input("Terminal Password\n> ")      #
 
 
 while True:
-    if key =="strosityischad":
+    if key =="angelischad":
         print("Password is correct!")
         print(f"{Fore.YELLOW}Enter to pass: ")
         break
@@ -54,7 +54,7 @@ async def on_ready():
             ░  ░   ░            ░    ░           ░       ░  ░    ░  ░
                                                                      
 {Fore.RESET}{Fore.BLUE}                                                                                     
-------------------------------------------- Terminal 2 - Made by Strosity
+------------------------------------------- Terminal 2 - Made by AngelSec
 {Fore.RESET}{Fore.YELLOW}Bot command = {prefix}help
 {Fore.RESET}{Fore.GREEN}Bot spam = {spam_messages}
 {Fore.RESET}{Fore.RED}Bot channels = {channels}
